@@ -4,8 +4,10 @@ def line(array)
   if array.length == 0
     puts "The line is currently empty."
   else array.length >= 1
+    current_line = "The line is currently:"
     array.each.with_index(1) do |value, index|
-      puts " #{index}. #{value} ".insert(0, "The line is currently:")
+      current_line << " #{index}. #{value}"
+      puts current_line
     end
   end
 end
